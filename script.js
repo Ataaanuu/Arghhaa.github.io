@@ -1,13 +1,12 @@
-const categories =
-    document.querySelectorAll(".category");
+const branchNodes = document.querySelectorAll(".branch-node");
 
-categories.forEach(category => {
 
-    category.addEventListener("click", () => {
+branchNodes.forEach((node) => {
+
+    node.addEventListener("click", () => {
 
         const children =
-            category.parentElement
-            .querySelector(".children");
+            node.parentElement.querySelector(".children");
 
         children.classList.toggle("hidden");
 
