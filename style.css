@@ -1,163 +1,53 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    margin: 0;
+
     min-height: 100vh;
 
-    background: #0d1117;
-    color: #e6edf3;
+    background: #0b0b0b;
 
-    font-family:
-        "Courier New",
-        monospace;
+    color: #ffffff;
+
+    font-family: "Courier New", monospace;
 
     display: flex;
+
     justify-content: center;
+
+    align-items: flex-start;
+
+    overflow-x: hidden;
+
 }
 
-.container {
+
+/* MAIN CONTAINER */
+
+.tree-container {
+
     width: 100%;
+
     max-width: 1200px;
 
-    padding: 60px 20px;
+    padding: 70px 30px 100px;
 
-    text-align: center;
-}
-
-h1 {
-    font-size: 22px;
-    font-weight: normal;
-
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    color: #7d8590;
-
-    font-size: 14px;
-
-    margin-bottom: 70px;
 }
 
 
-/* TREE */
-
-.tree {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-}
-
-
-/* ROOT */
-
-.root {
-    position: relative;
-
-    margin-bottom: 80px;
-}
-
-.root::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 2px;
-    height: 80px;
-
-    background: #4b5563;
-
-    left: 50%;
-    top: 100%;
-}
-
-
-/* BRANCH CONTAINER */
-
-.branches {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 80px;
-
-    width: 100%;
-
-    position: relative;
-}
-
-
-/* CONNECTING HORIZONTAL LINE */
-
-.branches::before {
-
-    content: "";
-
-    position: absolute;
-
-    height: 2px;
-
-    background: #4b5563;
-
-    width: 65%;
-
-    top: -40px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-}
-
-
-/* BRANCH */
-
-.branch {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    position: relative;
-}
-
-
-/* VERTICAL LINE */
-
-.branch::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 2px;
-
-    height: 40px;
-
-    background: #4b5563;
-
-    top: -40px;
-}
-
-
-/* CIRCLES */
+/* ALL NODES */
 
 .node {
 
-    border: 2px solid #8b949e;
+    width: 120px;
+
+    height: 120px;
 
     border-radius: 50%;
-
-    width: 130px;
-
-    height: 130px;
 
     display: flex;
 
@@ -169,52 +59,163 @@ h1 {
 
     padding: 15px;
 
+    font-family: inherit;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
     text-decoration: none;
 
-    color: #e6edf3;
+    color: white;
 
-    background: #161b22;
+    background: #111;
+
+    border: 1px solid #444;
+
+    cursor: pointer;
 
     transition:
         transform 0.25s ease,
-        background 0.25s ease,
         border-color 0.25s ease,
+        background 0.25s ease,
         box-shadow 0.25s ease;
 
-    cursor: pointer;
 }
 
 
-/* ROOT CIRCLE */
+/* ROOT */
 
-.main-node {
+.root-node {
 
     width: 150px;
 
     height: 150px;
 
-    border-color: #58a6ff;
+    margin: 0 auto 100px;
 
-    font-size: 20px;
+    border: 2px solid white;
 
-    box-shadow:
-        0 0 30px rgba(88, 166, 255, 0.15);
+    font-size: 18px;
+
+    font-weight: bold;
+
+    background: #151515;
+
+    box-shadow: 0 0 30px rgba(255,255,255,0.08);
+
+    position: relative;
+
 }
 
 
-/* CATEGORY */
+/* LINE FROM ATANU */
 
-.category {
+.root-node::after {
 
-    font-size: 15px;
+    content: "";
 
-    border-color: #3fb950;
+    position: absolute;
+
+    width: 1px;
+
+    height: 100px;
+
+    background: #444;
+
+    bottom: -100px;
+
+    left: 50%;
+
+}
+
+
+/* MAIN TREE */
+
+.tree {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 70px;
+
+    position: relative;
+
+}
+
+
+/* MAIN BRANCH */
+
+.tree-branch {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+
+}
+
+
+/* LINE GOING INTO MAIN NODE */
+
+.tree-branch::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 35px;
+
+    background: #444;
+
+    top: -35px;
+
+}
+
+
+/* CATEGORY NODE */
+
+.branch-node {
+
+    appearance: none;
+
+    border: 1px solid #888;
+
+    background: #151515;
+
+    font-size: 13px;
+
+}
+
+
+/* CATEGORY HOVER */
+
+.branch-node:hover {
+
+    transform: scale(1.08);
+
+    border-color: white;
+
+    background: #1c1c1c;
+
+    box-shadow: 0 0 25px rgba(255,255,255,0.12);
+
 }
 
 
 /* CHILDREN */
 
 .children {
+
+    width: 100%;
+
+    margin-top: 60px;
 
     display: flex;
 
@@ -224,15 +225,16 @@ h1 {
 
     gap: 25px;
 
-    margin-top: 70px;
-
-    max-width: 350px;
-
     position: relative;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
 }
 
 
-/* CHILD CONNECTING LINE */
+/* LINE FROM CATEGORY TO CHILDREN */
 
 .children::before {
 
@@ -240,100 +242,125 @@ h1 {
 
     position: absolute;
 
-    width: 2px;
+    width: 1px;
 
-    height: 70px;
+    height: 60px;
 
-    background: #4b5563;
+    background: #444;
 
-    top: -70px;
+    top: -60px;
 
     left: 50%;
+
 }
 
 
-/* SMALL NODES */
+/* CHILD NODE */
 
-.small {
+.leaf-node {
 
-    width: 100px;
+    width: 95px;
 
-    height: 100px;
+    height: 95px;
 
-    font-size: 12px;
+    font-size: 10px;
 
-    border-color: #d29922;
+    border-color: #555;
+
 }
 
 
-/* HOVER */
+/* CHILD HOVER */
 
-.node:hover {
+.leaf-node:hover {
 
-    transform: scale(1.12);
-
-    background: #21262d;
+    transform: translateY(-5px) scale(1.08);
 
     border-color: white;
 
-    box-shadow:
-        0 0 25px rgba(255,255,255,0.2);
+    background: #1b1b1b;
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.12);
+
+}
+
+
+/* HIDDEN CHILDREN */
+
+.children.hidden {
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+    pointer-events: none;
+
+    height: 0;
+
+    margin-top: 0;
+
 }
 
 
 /* MOBILE */
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
 
-    .branches {
+    .tree {
 
-        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
 
-        gap: 90px;
-    }
+        row-gap: 100px;
 
-    .branches::before {
-
-        display: none;
-    }
-
-    .branch::before {
-
-        height: 40px;
-    }
-
-    .children {
-
-        margin-top: 60px;
     }
 
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
-    .node {
+    .tree-container {
 
-        width: 105px;
+        padding: 50px 15px 80px;
 
-        height: 105px;
     }
 
-    .main-node {
+
+    .root-node {
 
         width: 130px;
 
         height: 130px;
+
+        margin-bottom: 90px;
+
     }
 
-    .children {
 
-        gap: 15px;
+    .tree {
+
+        grid-template-columns: 1fr;
+
+        gap: 100px;
+
     }
 
-}
-.hidden {
 
-    display: none;
+    .node {
+
+        width: 110px;
+
+        height: 110px;
+
+    }
+
+
+    .leaf-node {
+
+        width: 90px;
+
+        height: 90px;
+
+    }
 
 }
