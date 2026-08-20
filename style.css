@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: #0d1117;
+    color: #e6edf3;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: normal;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #7d8590;
+
+    font-size: 14px;
+
+    margin-bottom: 70px;
+}
+
+
+/* TREE */
+
+.tree {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* ROOT */
+
+.root {
+    position: relative;
+
+    margin-bottom: 80px;
+}
+
+.root::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 80px;
+
+    background: #4b5563;
+
+    left: 50%;
+    top: 100%;
+}
+
+
+/* BRANCH CONTAINER */
+
+.branches {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 80px;
+
+    width: 100%;
+
+    position: relative;
+}
+
+
+/* CONNECTING HORIZONTAL LINE */
+
+.branches::before {
+
+    content: "";
+
+    position: absolute;
+
+    height: 2px;
+
+    background: #4b5563;
+
+    width: 65%;
+
+    top: -40px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+
+/* BRANCH */
+
+.branch {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* VERTICAL LINE */
+
+.branch::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 40px;
+
+    background: #4b5563;
+
+    top: -40px;
+}
+
+
+/* CIRCLES */
+
+.node {
+
+    border: 2px solid #8b949e;
+
+    border-radius: 50%;
+
+    width: 130px;
+
+    height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 15px;
+
+    text-decoration: none;
+
+    color: #e6edf3;
+
+    background: #161b22;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    cursor: pointer;
+}
+
+
+/* ROOT CIRCLE */
+
+.main-node {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-color: #58a6ff;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 0 30px rgba(88, 166, 255, 0.15);
+}
+
+
+/* CATEGORY */
+
+.category {
+
+    font-size: 15px;
+
+    border-color: #3fb950;
+}
+
+
+/* CHILDREN */
+
+.children {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 70px;
+
+    max-width: 350px;
+
+    position: relative;
+}
+
+
+/* CHILD CONNECTING LINE */
+
+.children::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 70px;
+
+    background: #4b5563;
+
+    top: -70px;
+
+    left: 50%;
+}
+
+
+/* SMALL NODES */
+
+.small {
+
+    width: 100px;
+
+    height: 100px;
+
+    font-size: 12px;
+
+    border-color: #d29922;
+}
+
+
+/* HOVER */
+
+.node:hover {
+
+    transform: scale(1.12);
+
+    background: #21262d;
+
+    border-color: white;
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.2);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .branches {
+
+        flex-direction: column;
+
+        gap: 90px;
+    }
+
+    .branches::before {
+
+        display: none;
+    }
+
+    .branch::before {
+
+        height: 40px;
+    }
+
+    .children {
+
+        margin-top: 60px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .node {
+
+        width: 105px;
+
+        height: 105px;
+    }
+
+    .main-node {
+
+        width: 130px;
+
+        height: 130px;
+    }
+
+    .children {
+
+        gap: 15px;
+    }
+
+}
