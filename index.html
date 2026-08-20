@@ -2,177 +2,133 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ATANU</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>moosa kalimullah</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+        }
+
+        body {
+            font-family: "Courier New", Courier, monospace;
+            color: #111;
+            padding: 18px 18px 40px;
+        }
+
+        .tree {
+            font-size: 23px;
+            line-height: 1.55;
+            white-space: pre;
+            font-weight: 400;
+        }
+
+        /* Main name */
+
+        .title {
+            color: #111;
+            font-weight: 700;
+        }
+
+        /* Folder / category */
+
+        .folder {
+            color: #2020a0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .folder:hover {
+            text-decoration: underline;
+        }
+
+        /* Files */
+
+        .file {
+            color: #43813d;
+            text-decoration: none;
+        }
+
+        .file:hover {
+            text-decoration: underline;
+        }
+
+        /* Invisible spacing */
+
+        .space {
+            display: inline-block;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 14px 18px 30px;
+            }
+
+            .tree {
+                font-size: 20px;
+                line-height: 1.55;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-    <main class="tree-container">
 
-        <!-- ROOT -->
-        <div class="node root-node">
-            ATANU
-        </div>
+<pre class="tree"><span class="title">Atanu karmakar</span>
+│
+├── <a class="folder" href="#">about_me</a>
+│   └── <a class="file" href="about_me/intro.txt">intro.txt</a>
+│
+├── <a class="folder" href="#">management</a>
+│   └── <a class="file" href="management/contact.txt">contact.txt</a>
+│
+├── <a class="folder" href="#">ebook</a>
+│   └── <a class="file" href="ebook/tenets_of_muscular_proportionality.txt">tenets_of_muscular_proportionality.txt</a>
+│
+├── <a class="folder" href="#">youtube</a>
+│   └── <a class="file" href="youtube/channel.txt">channel.txt</a>
+│
+├── <a class="folder" href="#">music</a>
+│   ├── <a class="file" href="music/slouch.txt">slouch.txt</a>
+│   ├── <a class="file" href="music/dowjones.txt">dowjones.txt</a>
+│   └── <a class="file" href="music/spotify_account.txt">spotify_account.txt</a>
+│
+├── <a class="folder" href="#">monthly_suggestions</a>
+│   ├── <a class="file" href="monthly_suggestions/article.txt">article.txt</a>
+│   ├── <a class="file" href="monthly_suggestions/music.txt">music.txt</a>
+│   └── <a class="file" href="monthly_suggestions/movie.txt">movie.txt</a>
+│
+├── <a class="folder" href="#">guestbook</a>
+│   └── <a class="file" href="guestbook/guestbook.txt">guestbook.txt</a>
+│
+└── <a class="folder" href="#">archived_page</a>
+    └── <a class="file" href="archived_page/domain_2025.txt">domain_2025.txt</a>
+</pre>
 
-
-        <!-- MAIN TREE -->
-        <div class="tree">
-
-
-            <!-- MUSIC -->
-            <section class="tree-branch">
-
-                <button class="node branch-node">
-                    MUSIC
-                </button>
-
-                <div class="children">
-
-                    <a
-                        href="YOUR_SPOTIFY_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        SPOTIFY
-                    </a>
-
-                    <a
-                        href="YOUR_PLAYLIST_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        PLAYLISTS
-                    </a>
-
-                </div>
-
-            </section>
-
-
-            <!-- EDITING -->
-            <section class="tree-branch">
-
-                <button class="node branch-node">
-                    EDITING
-                </button>
-
-                <div class="children">
-
-                    <a
-                        href="https://www.blackmagicdesign.com/products/davinciresolve/"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        DAVINCI<br>RESOLVE
-                    </a>
-
-                    <a
-                        href="https://www.adobe.com/products/aftereffects.html"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        AFTER<br>EFFECTS
-                    </a>
-
-                    <a
-                        href="https://www.blender.org/"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        BLENDER
-                    </a>
-
-                    <a
-                        href="https://derivative.ca/"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        TOUCH<br>DESIGNER
-                    </a>
-
-                </div>
-
-            </section>
-
-
-            <!-- SOCIALS -->
-            <section class="tree-branch">
-
-                <button class="node branch-node">
-                    SOCIALS
-                </button>
-
-                <div class="children">
-
-                    <a
-                        href="YOUR_INSTAGRAM_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        INSTAGRAM
-                    </a>
-
-                    <a
-                        href="YOUR_REDDIT_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        REDDIT
-                    </a>
-
-                    <a
-                        href="YOUR_GITHUB_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        GITHUB
-                    </a>
-
-                </div>
-
-            </section>
-
-
-            <!-- PROJECTS -->
-            <section class="tree-branch">
-
-                <button class="node branch-node">
-                    PROJECTS
-                </button>
-
-                <div class="children">
-
-                    <a
-                        href="YOUR_COLLAGE_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        COLLAGE<br>ART
-                    </a>
-
-                    <a
-                        href="YOUR_EXPERIMENTS_LINK"
-                        target="_blank"
-                        class="node leaf-node"
-                    >
-                        EXPERIMENTS
-                    </a>
-
-                </div>
-
-            </section>
-
-        </div>
-
-    </main>
-
-
-    <script src="script.js"></script>
 
 </body>
 
