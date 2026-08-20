@@ -1,154 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Atanu's Tree</title>
+    <title>ATANU</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
-
-    <h1>my little corner of the internet</h1>
-    <p class="subtitle">click a node to explore</p>
-
-    <div class="tree">
+    <main class="tree-container">
 
         <!-- ROOT -->
-        <div class="root">
-            <div class="node main-node">
-                ATANU
-            </div>
+        <div class="node root-node">
+            ATANU
         </div>
 
-        <!-- BRANCHES -->
-        <div class="branches">
 
-            <!-- SPOTIFY -->
-            <div class="branch">
+        <!-- MAIN TREE -->
+        <div class="tree">
 
-                <div class="node category">
-                    SPOTIFY
-                </div>
+
+            <!-- MUSIC -->
+            <section class="tree-branch">
+
+                <button class="node branch-node">
+                    MUSIC
+                </button>
 
                 <div class="children">
 
-                    <a href="https://open.spotify.com/user/31lkaknhadm5e2osumpsjdw7fynq?si=14828eda0a5444fb"
-                       target="_blank"
-                       class="node small">
-
-                        PROFILE
-
+                    <a
+                        href="YOUR_SPOTIFY_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        SPOTIFY
                     </a>
 
-                    <a href="YOUR_PLAYLIST_LINK"
-                       target="_blank"
-                       class="node small">
-
-                        PLAYLIST
-
+                    <a
+                        href="YOUR_PLAYLIST_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        PLAYLISTS
                     </a>
 
                 </div>
 
-            </div>
+            </section>
 
 
             <!-- EDITING -->
-            <div class="branch">
+            <section class="tree-branch">
 
-                <div class="node category">
+                <button class="node branch-node">
                     EDITING
-                </div>
+                </button>
 
                 <div class="children">
 
-                    <a href="https://www.blackmagicdesign.com/products/davinciresolve/"
-                       target="_blank"
-                       class="node small">
-
-                        DAVINCI
-
+                    <a
+                        href="https://www.blackmagicdesign.com/products/davinciresolve/"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        DAVINCI<br>RESOLVE
                     </a>
 
-                    <a href="https://www.blender.org/"
-                       target="_blank"
-                       class="node small">
+                    <a
+                        href="https://www.adobe.com/products/aftereffects.html"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        AFTER<br>EFFECTS
+                    </a>
 
+                    <a
+                        href="https://www.blender.org/"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
                         BLENDER
-
                     </a>
 
-                    <a href="https://www.adobe.com/products/aftereffects.html"
-                       target="_blank"
-                       class="node small">
-
-                        AFTER FX
-
-                    </a>
-
-                    <a href="https://derivative.ca/"
-                       target="_blank"
-                       class="node small">
-
-                        TOUCH
-                        DESIGNER
-
+                    <a
+                        href="https://derivative.ca/"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        TOUCH<br>DESIGNER
                     </a>
 
                 </div>
 
-            </div>
+            </section>
 
 
             <!-- SOCIALS -->
-            <div class="branch">
+            <section class="tree-branch">
 
-                <div class="node category">
+                <button class="node branch-node">
                     SOCIALS
-                </div>
+                </button>
 
                 <div class="children">
 
-                    <a href="YOUR_INSTAGRAM_LINK"
-                       target="_blank"
-                       class="node small">
-
+                    <a
+                        href="YOUR_INSTAGRAM_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
                         INSTAGRAM
-
                     </a>
 
-                    <a href="YOUR_REDDIT_LINK"
-                       target="_blank"
-                       class="node small">
-
+                    <a
+                        href="YOUR_REDDIT_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
                         REDDIT
-
                     </a>
 
-                    <a href="YOUR_GITHUB_LINK"
-                       target="_blank"
-                       class="node small">
-
+                    <a
+                        href="YOUR_GITHUB_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
                         GITHUB
-
                     </a>
 
                 </div>
 
-            </div>
+            </section>
+
+
+            <!-- PROJECTS -->
+            <section class="tree-branch">
+
+                <button class="node branch-node">
+                    PROJECTS
+                </button>
+
+                <div class="children">
+
+                    <a
+                        href="YOUR_COLLAGE_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        COLLAGE<br>ART
+                    </a>
+
+                    <a
+                        href="YOUR_EXPERIMENTS_LINK"
+                        target="_blank"
+                        class="node leaf-node"
+                    >
+                        EXPERIMENTS
+                    </a>
+
+                </div>
+
+            </section>
 
         </div>
 
-    </div>
+    </main>
 
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
